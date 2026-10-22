@@ -1,0 +1,13 @@
+{
+  "name": "forkify",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "Héctor Sánchez",
+  "type": "commonjs",
+  "source": "index.html",
+  "scripts": {
+    "start": "parcel index.html",
+    "build": "parcel build index.html"
+  }
+}
