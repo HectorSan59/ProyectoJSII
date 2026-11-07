@@ -24,4 +24,13 @@ const init = function () {
   recipeView.addHandlerRender(controlRecipes);
 };
 
+const controlSearchResults = async function (query) {
+  try {
+    await model.loadSearchResults(query);
+    console.log(model.state.search.results);
+  } catch (err) {
+    console.error('Error al controlar la búsqueda:', err);
+  }
+};
+
 init();
