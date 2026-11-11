@@ -34,6 +34,7 @@ export const loadRecipe = async function (id) {
 export const loadSearchResults = async function (query) {
     try {
         state.search.query = query;
+        state.search.page = 1;
 
         const data = await getJSON(
             `${API_URL}?search=${encodeURIComponent(query)}`
@@ -60,4 +61,4 @@ export const getSearchResultsPage = function (page = state.search.page) {
     const end = page * state.search.resultsPerPage;
 
     return state.search.results.slice(start, end);
-}
+};
