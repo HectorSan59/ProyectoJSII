@@ -36,7 +36,7 @@ const controlSearchResults = async function () {
 
     await model.loadSearchResults(query);
 
-    resultsView.render(model.state.search.results);
+    resultsView.render(model.getSearchResultsPage());
   } catch (err) {
     console.error('Error al controlar la búsqueda:', err);
     resultsView.renderError('Could not load search results. Please try again!');
